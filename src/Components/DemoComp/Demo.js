@@ -149,7 +149,7 @@ export default class Demo extends Component {
                                 </div>
 
                                 <Button disabled={!this.state.selectedFile} className="btn" onClick={this.uploadHandler}>Predict!</Button>
-                                {(this.state.loading) ? <div className="loader"></div> : <Result> <span style={{ color: "#00000" }}>Result:</span> {this.state.result}</Result>}
+                                {(this.state.loading) ? <div className="loader"></div> : <Result>Result: <span style={{ color: "#FF4200" }}>{this.state.result}</span> </Result>}
 
                             </StyledCard>
                         </Col>

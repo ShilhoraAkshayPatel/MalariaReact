@@ -49,7 +49,7 @@ const Button = styled.button`
 `
 
 const Result = styled.h1`
-  color:#FF4200;
+  
   margin-left:-200px;
   font-size: 30px;
   padding: 15px;

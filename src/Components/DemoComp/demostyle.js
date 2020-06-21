@@ -32,7 +32,7 @@ const StyledCard = styled(Card)`
 
 const Button = styled.button`
   width: 100%;
-  background-color: #12cc22ea;
+  background-color: #80FF00;
   color: #000000;
   padding: 14px 20px;
   margin: 10px;
@@ -44,7 +44,7 @@ const Button = styled.button`
   font-size: 25px;
   font-weight:600;
 :hover {
-  background-color: #0e927c;
+  background-color: #80FF00;
 }
 `
 
@@ -71,7 +71,7 @@ const Text = styled.p`
   font-family:'Roboto', sans-serif;
 `
 const DivComp = styled.div`
-  background-color: #5ee9eeed;
+  background-color: #C3F5FE;
   min-height: 100vh;
 
 `

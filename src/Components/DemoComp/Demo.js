@@ -81,7 +81,7 @@ export default class Demo extends Component {
         console.log(this.state)
         return (
             <DivComp>
-                <Container style={{ backgroundColor: '#5ee9eeed' }} fluid>
+                <Container fluid>
                     <Row>
 
                         <Col lg={5}>
@@ -99,7 +99,7 @@ export default class Demo extends Component {
                                 >
                                     {(this.state.selectedFile) ?
                                         <StyledCard
-                                            color={'#9b9696ea'}
+                                            color={'#EEEFF0'}
                                             height={'330px'}
                                             width={'500px'}
                                         >
@@ -131,7 +131,7 @@ export default class Demo extends Component {
 
                         <Col lg={7}>
                             < StyledCard
-                                color={'#9b9696ea'}
+                                color={'#EEEFF0'}
                                 className="card text-center"
                             >
                                 <Headtitle>Upload Cell Image for Prediction </Headtitle>

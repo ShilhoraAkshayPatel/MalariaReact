@@ -5,8 +5,8 @@ import { Card } from 'react-bootstrap';
 const Headtitle = styled.h1`
     padding-top: 20px;
     font-size: 28px ;
-    font-weight: 500;
-    color:  ${({ textcolor }) => textcolor || '#333'} ;
+    font-weight: 600;
+    color:  ${({ textcolor }) => textcolor || '#00000'} ;
     text-align:center;
     font-family: 'Roboto', sans-serif;
 `
@@ -32,7 +32,7 @@ const StyledCard = styled(Card)`
 
 const Button = styled.button`
   width: 100%;
-  background-color: #11b9cf;
+  background-color: #12cc22ea;
   color: #000000;
   padding: 14px 20px;
   margin: 10px;
@@ -70,6 +70,10 @@ const Text = styled.p`
   font-weight:600;
   font-family:'Roboto', sans-serif;
 `
+const DivComp = styled.div`
+  background-color: #5ee9eeed;
+  min-height: 100vh;
 
+`
 
-export { StyledCard, Headtitle, Button, Result, Title, Text };
+export { StyledCard, Headtitle, Button, Result, Title, Text, DivComp };

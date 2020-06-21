@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { StyledCard, Headtitle, Button, Result, Title, Text } from '../DemoComp/demostyle'
+import { StyledCard, Headtitle, Button, Result, Title, Text, DivComp } from '../DemoComp/demostyle'
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import { FadeTransform } from 'react-animation-components'
 
@@ -80,78 +80,82 @@ export default class Demo extends Component {
     render() {
         console.log(this.state)
         return (
-            <Container fluid>
-                <Row>
+            <DivComp>
+                <Container style={{ backgroundColor: '#5ee9eeed' }} fluid>
+                    <Row>
 
-                    <Col lg={5}>
-                        <Row>
+                        <Col lg={5}>
+                            <Row>
 
-                            <FadeTransform in
-                                delay={2000}
-                                duration={2000}
-                                transformProps={{
-                                    exitTransform: 'scale(0.8) translateX(-50%)'
-                                }}
-                                fadeProps={{
-                                    enterOpacity: 0.85,
-                                }}
+                                <FadeTransform in
+                                    delay={2000}
+                                    duration={2000}
+                                    transformProps={{
+                                        exitTransform: 'scale(0.8) translateX(-50%)'
+                                    }}
+                                    fadeProps={{
+                                        enterOpacity: 0.85,
+                                    }}
+                                >
+                                    {(this.state.selectedFile) ?
+                                        <StyledCard
+                                            color={'#9b9696ea'}
+                                            height={'330px'}
+                                            width={'500px'}
+                                        >
+                                            <Container fluid>
+                                                <Row>
+                                                    <Col lg={6}>
+                                                        <img style={{ width: '280px', height: '280px', padding: '25px', borderRadius: '18px' }} src={this.state.selectedFile} alt="uploaded data" />
+                                                    </Col>
+                                                    <Col lg={6}>
+                                                        <Title>Details</Title>
+                                                        {(this.state.selectedFile) ?
+                                                            <>
+                                                                <Text>Size: {(this.state.filesize / 1024).toFixed(2)}KB</Text>
+                                                                <Text>Type: {this.state.filetype}</Text>
+
+                                                            </>
+
+                                                            : "No details Found"
+                                                        }
+
+                                                    </Col>
+                                                </Row>
+                                            </Container>
+                                        </StyledCard>
+                                        : null}
+                                </FadeTransform>
+                            </Row>
+                        </Col>
+
+                        <Col lg={7}>
+                            < StyledCard
+                                color={'#9b9696ea'}
+                                className="card text-center"
                             >
-                                {(this.state.selectedFile) ?
-                                    <StyledCard
-                                        height={'330px'}
-                                        width={'500px'}
-                                    >
-                                        <Container fluid>
-                                            <Row>
-                                                <Col lg={6}>
-                                                    <img style={{ width: '280px', height: '280px', padding: '25px' }} src={this.state.selectedFile} alt="uploaded data" />
-                                                </Col>
-                                                <Col lg={6}>
-                                                    <Title>Details</Title>
-                                                    {(this.state.selectedFile) ?
-                                                        <>
-                                                            <Text>Size: {(this.state.filesize / 1024).toFixed(2)}KB</Text>
-                                                            <Text>Type: {this.state.filetype}</Text>
+                                <Headtitle>Upload Cell Image for Prediction </Headtitle>
 
-                                                        </>
+                                <div style={{ width: '450px', padding: '15px', marginLeft: '100px' }}>
 
-                                                        : "No details Found"
-                                                    }
+                                    <Form.File
+                                        id="custom-file-translate-scss"
+                                        label={(this.state.filename) ? this.state.filename : "Upload a File..."}
+                                        lang="en"
+                                        custom
+                                        onChange={this.fileChangedHandler}
+                                    />
 
-                                                </Col>
-                                            </Row>
-                                        </Container>
-                                    </StyledCard>
-                                    : null}
-                            </FadeTransform>
-                        </Row>
-                    </Col>
+                                </div>
 
-                    <Col lg={7}>
-                        < StyledCard
-                            className="card text-center"
-                        >
-                            <Headtitle>Upload Cell Image for Prediction </Headtitle>
+                                <Button disabled={!this.state.selectedFile} className="btn" onClick={this.uploadHandler}>Predict!</Button>
+                                {(this.state.loading) ? <div className="loader"></div> : <Result>Result: {this.state.result}</Result>}
 
-                            <div style={{ width: '450px', padding: '15px', marginLeft: '100px' }}>
-
-                                <Form.File
-                                    id="custom-file-translate-scss"
-                                    label={(this.state.filename) ? this.state.filename : "Upload a File..."}
-                                    lang="en"
-                                    custom
-                                    onChange={this.fileChangedHandler}
-                                />
-
-                            </div>
-
-                            <Button disabled={!this.state.selectedFile} className="btn" onClick={this.uploadHandler}>Predict!</Button>
-                            {(this.state.loading) ? <div className="loader"></div> : <Result>Result: {this.state.result}</Result>}
-
-                        </StyledCard>
-                    </Col>
-                </Row>
-            </Container >
+                            </StyledCard>
+                        </Col>
+                    </Row>
+                </Container >
+            </DivComp>
         );
     }
 

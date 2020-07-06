@@ -52,7 +52,9 @@ const Result = styled.h1`
   
   margin-left:-200px;
   font-size: 30px;
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom:15px;
+  padding-left: 200px;
   font-weight:600;
   font-family:'Roboto', sans-serif;
 `

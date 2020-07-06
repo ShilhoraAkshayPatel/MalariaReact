@@ -72,7 +72,7 @@ const Text = styled.p`
   font-family:'Roboto', sans-serif;
 `
 const DivComp = styled.div`
-  background-color: #FFC45F;
+  background-color: #C3F5FE;
   min-height: 100vh;
 
 `

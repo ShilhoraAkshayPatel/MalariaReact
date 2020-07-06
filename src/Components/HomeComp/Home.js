@@ -19,9 +19,9 @@ export default class Home extends Component {
                         The application is designed to predict whether 
                     <br/> 
                     the input image is either parasitized or un-infected. </p>
-                    <p style={{ fontSize: '26px', fontFamily: 'monospace' }}>We've trained our network for the set of images
-                        <a href={"https://drive.google.com/drive/folders/1OFb4oUvQ8ofwsHGXusfxvpToBbAu01TT?usp=sharing"}> Click here To get images </a>
-                        <br /> when you test these can give you an outcome in less than 3 seconds.</p>
+                    <p style={{ fontSize: '26px', fontFamily: 'monospace' }}>
+                        We've trained our network for the set of images
+                 <br /> when you test these can give you an outcome in less than 3 seconds.</p>
 
                     <p style={{ fontSize: '26px', fontFamily: 'monospace' }}>
                         When higher-resolution images are given as input it consumes time.
@@ -45,6 +45,11 @@ export default class Home extends Component {
                         <br />
                         If in case of data compatibility issues download set of images from the website and try on them.
                     </p>
+
+                        <p style={{ fontSize: '26px', fontFamily: 'monospace' }}>
+                            In Case of any Dataset Compatibility Issue Dawnload 
+                        <a href={"https://drive.google.com/drive/folders/1OFb4oUvQ8ofwsHGXusfxvpToBbAu01TT?usp=sharing"}> Dataset From Here </a>
+                        </p>
 
                     <div style={{ fontSize: '26px', fontFamily: 'monospace', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <div style={{padding:'12px'}}>

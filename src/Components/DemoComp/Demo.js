@@ -43,6 +43,7 @@ export default class Demo extends Component {
 
         const options = {
             maxSizeMB: 1,
+            maxWidthOrHeight: 256,
             maxIteration: 3,
             useWebWorker: true
         }

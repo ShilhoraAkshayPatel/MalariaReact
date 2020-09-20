@@ -6,7 +6,7 @@ import { FadeTransform } from 'react-animation-components';
 import imageCompression from 'browser-image-compression';
 
 
-const cmyurl = "https://malariaapi-290018.el.r.appspot.com/api/predict";
+// const cmyurl = "https://malariaapi-290018.el.r.appspot.com/api/predict";
 const hmyurl = "https://malareaapi333.herokuapp.com/api/predict";
 export default class Demo extends Component {
 

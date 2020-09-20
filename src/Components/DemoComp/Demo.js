@@ -42,8 +42,8 @@ export default class Demo extends Component {
         console.log(`originalFile size ${imageFile.size / 1024 / 1024} MB`);
 
         const options = {
-            maxSizeMB: 0.500,
-            maxIteration: 5,
+            maxSizeMB: 1,
+            maxIteration: 8,
             useWebWorker: true
         }
         try {

@@ -91,7 +91,8 @@ export default class Demo extends Component {
             });
 
 
-            axiosTiming(axios, timeInMs => console.log(`${timeInMs.toFixed()}ms`))
+           const responsetime =  axiosTiming(axios, timeInMs => console.log(`${timeInMs.toFixed()}ms`))
+           console.log(responsetime)
     }
 
 

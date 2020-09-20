@@ -48,7 +48,7 @@ export default class Home extends Component {
 
                         <p style={{ fontSize: '26px', fontFamily: 'monospace' }}>
                             In Case of any Dataset Compatibility Issue Dawnload 
-                        <a href={"https://drive.google.com/drive/folders/1OFb4oUvQ8ofwsHGXusfxvpToBbAu01TT?usp=sharing"}> Dataset From Here </a>
+                        <a href={"https://mega.nz/folder/YdwxBRyQ#HyUAvfFYx2_8-VRnFAbNUA"}> Dataset From Here </a>
                         </p>
 
                     <div style={{ fontSize: '26px', fontFamily: 'monospace', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>

@@ -6,8 +6,8 @@ import { FadeTransform } from 'react-animation-components';
 import imageCompression from 'browser-image-compression';
 
 
-// const cmyurl = "https://malariaapi-290018.el.r.appspot.com/api/predict";
-const hmyurl = "https://malareaapi333.herokuapp.com/api/predict";
+const myurl = "https://malariaapi-290018.el.r.appspot.com/api/predict";
+// const myurl = "https://malareaapi333.herokuapp.com/api/predict";
 export default class Demo extends Component {
 
     constructor() {
@@ -42,8 +42,8 @@ export default class Demo extends Component {
         console.log(`originalFile size ${imageFile.size / 1024 / 1024} MB`);
 
         const options = {
-            maxSizeMB: 1,
-            maxIteration: 8,
+            maxSizeMB: 0.5,
+            maxIteration: 3,
             useWebWorker: true
         }
         try {
@@ -68,7 +68,7 @@ export default class Demo extends Component {
         const data = JSON.stringify(this.state.message)
         axios({
             method: 'post',
-            url: hmyurl,
+            url: myurl,
             data: data,
             headers: { 'Content-Type': 'application/json' }
         })

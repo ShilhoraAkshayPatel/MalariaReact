@@ -4,7 +4,7 @@ import { StyledCard, Headtitle, Button, Result, Title, Text, DivComp } from '../
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import { FadeTransform } from 'react-animation-components';
 import imageCompression from 'browser-image-compression';
-import axiosTiming from './axios-timing';
+import axiosTiming from 'axios-timing';
 
 
 // const myurl = "https://malariaapi-290018.el.r.appspot.com/api/predict";

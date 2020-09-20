@@ -41,9 +41,9 @@ export default class Demo extends Component {
         console.log(`originalFile size ${imageFile.size / 1024 / 1024} MB`);
 
         const options = {
-            maxSizeMB: 1,
+            maxSizeMB: 0.500,
             maxIteration: 5,
-            useWebWorker: false
+            useWebWorker: true
         }
         try {
             const compressedFile = await imageCompression(imageFile, options);

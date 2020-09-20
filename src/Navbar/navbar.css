@@ -1,0 +1,52 @@
+nav.navbar, .navbar-default {
+  background-color: #00B2FF   !important;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.navbar-default {
+  background-image: none;
+  border: none;
+  border-radius: 0;
+}
+
+@media screen and (min-width: 990px ) and (max-width:1400px) {
+    .navbar-nav{
+  margin-left: 28%;
+  
+    }
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1401px) and (max-width : 1824px) {
+.navbar-nav{
+  margin-left: 48%;
+    }
+}
+
+
+.navbar-nav a{
+  font-size: 22px ;
+  font-weight: 500;
+  padding: 8px;
+  margin: 10px;
+  color: #ffffff !important;
+  font-family: 'Roboto', sans-serif;
+  
+  
+}
+
+.navbar-brand{
+  font-size: 28px !important;
+  font-weight: 900;
+  padding: 8px;
+  margin: 0px;
+  color: #000000 !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+.space{
+  padding: 2px;
+}
+
+

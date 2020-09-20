@@ -4,6 +4,7 @@ import { StyledCard, Headtitle, Button, Result, Title, Text, DivComp } from '../
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import { FadeTransform } from 'react-animation-components';
 import imageCompression from 'browser-image-compression';
+import axiosTiming from './axios-timing';
 
 
 // const myurl = "https://malariaapi-290018.el.r.appspot.com/api/predict";
@@ -39,7 +40,7 @@ export default class Demo extends Component {
         })
 
         const imageFile = event.target.files[0];
-        console.log(`originalFile size ${imageFile.size / 1024 / 1024} MB`);
+        // console.log(`originalFile size ${imageFile.size / 1024 / 1024} MB`);
 
         const options = {
             maxSizeMB: 1,
@@ -49,7 +50,7 @@ export default class Demo extends Component {
         }
         try {
             const compressedFile = await imageCompression(imageFile, options);
-            console.log(`compressedFile size ${compressedFile.size / 1024 / 1024} MB`,compressedFile); // smaller than maxSizeMB
+           // console.log(`compressedFile size ${compressedFile.size / 1024 / 1024} MB`,compressedFile); // smaller than maxSizeMB
             const base64Image = await imageCompression.getDataUrlFromFile(compressedFile);
             const base64image = base64Image.replace('data:image/png;base64,','')
             
@@ -74,7 +75,7 @@ export default class Demo extends Component {
             headers: { 'Content-Type': 'application/json' }
         })
             .then(function (response) {
-                //handle success
+                //handle successnpm install axios-timing
                 const result = response.data
                 return result
 
@@ -88,6 +89,9 @@ export default class Demo extends Component {
                 //handle error
                 console.log(response);
             });
+
+
+            axiosTiming(axios, timeInMs => console.log(`${timeInMs.toFixed()}ms`))
     }
 
 

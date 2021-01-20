@@ -8,7 +8,7 @@ import axiosTiming from 'axios-timing';
 
 
 // const myurl = "https://malariaapi-290018.el.r.appspot.com/api/predict";
-const myurl = "https://malareaapi333.herokuapp.com/api/predict";
+const myurl = "https://malariaapi.herokuapp.com/api/predict";
 export default class Demo extends Component {
 
     constructor() {
